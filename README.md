@@ -2,6 +2,8 @@
 
 Datasets and code for ObjFormer paper: [Land-cover change detection using paired OpenStreetMap data and optical high-resolution imagery via object-guided Transformer.](https://arxiv.org/abs/2310.02674)
 
+## Note
+- 2023.10.26: This repo is currently under active development and construction. 
 
 ## Datasets
 ### OpenMapCD dataset
@@ -18,11 +20,50 @@ Two examples from this dataset:
 Two Japanese cities, Niigata and Kashiwa, are selected for testing models' generalization. The download link for the two study sites will also be available. The size of the optical images covering the two study sites are 12,036×18,944 and 11,776×18,688 pixels, respectively.
 
 Geographic location of the two study sites:
+
 <img src="./fig/study_site.jpg">
 
 
 ## Methodology
+We propose an object-guided transformer called ObjFormer for supervised and semi-supervised semantic change detection on paired OSM data and optical imagery. By utilizing the OBIA technique, the computational overhead of self-attention can be greatly reduced. 
 
+<img src="./fig/ObjFormer.jpg">
+
+
+
+### Getting started
+#### Installation
+Create and activate conda environment
+```
+conda create --name ObjFormer python=3.8
+conda activate ObjFormer
+pip install -r requirments.txt
+```
+Clone this repo to your PC
+```
+git clone https://github.com/ChenHongruixuan/ObjFormer.git
+cd ObjFormer
+```
+
+#### Object maps generation
+```
+
+```
+
+#### Training on the benchmark dataset
+```
+
+```
+
+#### Evalution on the benchmark dataset
+```
+
+```
+
+#### Inference on the local study sites (or your own dataset)
+```
+
+```
 
 ## Citation
 If this code or dataset contributes to your research, please consider citing our paper:
@@ -39,7 +80,7 @@ If this code or dataset contributes to your research, please consider citing our
 ## Other links
 If you are interested in land-cover mapping and domain adaptation in remote sensing using virtual datasets, you can also follow our two datasets below.
 
-[OpenEarthMap](https://arxiv.org/abs/2310.02674): a benchmark dataset for global sub-meter level land cover mapping.
+[OpenEarthMap dataset](https://arxiv.org/abs/2310.02674): a benchmark dataset for global sub-meter level land cover mapping.
 
 [SyntheWorld dataset](https://github.com/JTRNEO/SyntheWorld)
 : a large-scale virtual remote sensing datasets for land cover mapping and change detection.
