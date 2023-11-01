@@ -52,17 +52,18 @@ cd ObjFormer
 
 #### Training on the benchmark dataset
 ```
-
+python train_model.py
 ```
 
 #### Evalution on the benchmark dataset
+Evaluate the binary change detection model
 ```
-
+python evalution_model.py
 ```
 
 #### Inference on the local study sites (or your own dataset)
 ```
-
+python inference.py
 ```
 
 ## Citation
@@ -80,7 +81,7 @@ If this code or dataset contributes to your research, please consider citing our
 ## Other links
 If you are interested in land-cover mapping and domain adaptation in remote sensing using virtual datasets, you can also follow our two datasets below.
 
-[OpenEarthMap dataset](https://arxiv.org/abs/2310.02674): a benchmark dataset for global sub-meter level land cover mapping.
+[OpenEarthMap dataset](https://open-earth-map.org/): a benchmark dataset for global sub-meter level land cover mapping.
 
 [SyntheWorld dataset](https://github.com/JTRNEO/SyntheWorld)
 : a large-scale virtual remote sensing datasets for land cover mapping and change detection.
