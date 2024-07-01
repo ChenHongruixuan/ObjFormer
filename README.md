@@ -22,7 +22,7 @@
 
 ## 🔭Overview
 
-* [**OpenMapCD**](https://zenodo.org/records/12606585) is the first benchmark dataset for multimodal change detecton tasks on optical remote sensing imageyr and map data, with 1,288 samples from 40 regions across six continents, supoorting both binary and semantic change detection. 
+* [**OpenMapCD**](https://zenodo.org/records/12606585) is the first benchmark dataset for multimodal change detecton tasks on optical remote sensing imagery and map data, with 1,287 samples from 40 regions across six continents, supoorting both binary and semantic change detection. 
 
 
 * [**ObjFormer**](https://ieeexplore.ieee.org/document/10565926) serves as a robust and efficient benchmark for the proposed multimodal change detection tasks by combining OBIA techniques with self-attention mechanisms.
