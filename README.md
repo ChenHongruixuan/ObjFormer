@@ -1,90 +1,63 @@
-#  Object-guided Transformer for change detection using paired OSM data and optical imagery
+<div align="center">
+<h1 align="center">ObjFormer</h1>
 
-Datasets and code for ObjFormer paper: [Land-cover change detection using paired OpenStreetMap data and optical high-resolution imagery via object-guided Transformer.](https://arxiv.org/abs/2310.02674)
+<h3>Change Detection on Paired OSM Data and Optical High-Resolution Imagery via Object-Guided Transformer
+</h3>
 
-## Note
-- 2023.10.26: This repo is currently under active development and construction. 
+[Hongruixuan Chen](https://scholar.google.ch/citations?user=XOk4Cf0AAAAJ&hl=zh-CN&oi=ao)<sup>1</sup>, [Cuiling Lan](https://scholar.google.com/citations?user=XZugqiwAAAAJ&hl=zh-CN)<sup>2</sup>, [Jian Song](https://scholar.google.ch/citations?user=CgcMFJsAAAAJ&hl=zh-CN)<sup>1,3</sup>, [Clifford Broni-Bediako](https://scholar.google.co.jp/citations?user=Ng45cnYAAAAJ&hl=en)<sup>3</sup>, [Junshi Xia](https://scholar.google.com/citations?user=n1aKdTkAAAAJ&hl=en)<sup>3</sup>, [Naoto Yokoya](https://scholar.google.co.jp/citations?user=DJ2KOn8AAAAJ&hl=en)<sup>1,3 *</sup>
 
-## Datasets
-### OpenMapCD dataset
-We have constructed a global-scale benchmark dataset. This dataset contains 1,287 pair of OSM data and optical high-resolution imagery with the size of 1,024×1,024 pixels for binary and semantic change detection tasks. The download link for this dataset will be available soon.
-
-The dataset covers 40 regions on six continents.
-<img src="./fig/data_distribution.jpg">
-
-Two examples from this dataset:
-<img src="./fig/vienna_8.jpg">
-<img src="./fig/bielefeld_10.jpg">
-
-### Two local study sites
-Two Japanese cities, Niigata and Kashiwa, are selected for testing models' generalization. The download link for the two study sites will also be available. The size of the optical images covering the two study sites are 12,036×18,944 and 11,776×18,688 pixels, respectively.
-
-Geographic location of the two study sites:
-
-<img src="./fig/study_site.jpg">
+[![TGRS paper](https://img.shields.io/badge/TGRS-paper-00629B.svg)](https://ieeexplore.ieee.org/abstract/document/10551264)  [![arXiv paper](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/abs/2310.02674)
 
 
-## Methodology
-We propose an object-guided transformer called ObjFormer for supervised and semi-supervised semantic change detection on paired OSM data and optical imagery. By utilizing the OBIA technique, the computational overhead of self-attention can be greatly reduced. 
+<sup>1</sup> The University of Tokyo, <sup>2</sup> Microsoft Research Asia,  <sup>3</sup> RIKEN AIP,  <sup>*</sup> Corresponding author
 
-<img src="./fig/ObjFormer.jpg">
+[**Overview**](#overview) | [**Get Started**](#%EF%B8%8Flets-get-started) | [**Taken Away**](#%EF%B8%8Fresults-taken-away) | [**Common Issues**](#common-issues) | [**Others**](#q--a) | [**简体中文版**](./README_zh-CN.md)
+
+</div>
+
+## 🛎️Updates
+* **` Notice`**: ObjFormer has been accepted by [IEEE TGRS](https://ieeexplore.ieee.org/document/10551264)! We will upload the dataset and code soon. We'd appreciate it if you could give this repo a ⭐️**star**⭐️ and stay tuned!!
+* **` July 01st, 2024`**: We have uploaded [OpenMapCD dataset](https://zenodo.org/records/12606585). You are welcome to download and use it!
 
 
+## 🔭Overview
 
-### Getting started
-#### Installation
-Create and activate conda environment
+* [**OpenMapCD**](https://zenodo.org/records/12606585) is the first benchmark dataset for multimodal change detecton tasks on optical remote sensing imageyr and map data, with 1,288 samples from 40 regions across six continents, supoorting both binary and semantic change detection. 
+
+
+* [**ObjFormer**](https://ieeexplore.ieee.org/document/10565926) serves as a robust and efficient benchmark for the proposed multimodal change detection tasks by combining OBIA techniques with self-attention mechanisms.
+
+<img src="./fig/Overall_framework.jpg">
+
+## 🗝️Let's Get Started!
+### `A. Installation`
+
+Under construction...
+
+
+## 📜Reference
+
+If this code or dataset contributes to your research, please kindly consider citing our paper and give this repo ⭐️ :)
 ```
-conda create --name ObjFormer python=3.8
-conda activate ObjFormer
-pip install -r requirments.txt
-```
-Clone this repo to your PC
-```
-git clone https://github.com/ChenHongruixuan/ObjFormer.git
-cd ObjFormer
-```
-
-#### Object maps generation
-```
-
-```
-
-#### Training on the benchmark dataset
-```
-python train_model.py
-```
-
-#### Evalution on the benchmark dataset
-Evaluate the binary change detection model
-```
-python evalution_model.py
-```
-
-#### Inference on the local study sites (or your own dataset)
-```
-python inference.py
-```
-
-## Citation
-If this code or dataset contributes to your research, please consider citing our paper:
-```
-@article{chen2023land,
-  title={Land-cover change detection using paired OpenStreetMap data and optical high-resolution imagery via object-guided Transformer},
+@ARTICLE{Chen2024ObjFormer,
   author={Chen, Hongruixuan and Lan, Cuiling and Song, Jian and Broni-Bediako, Clifford and Xia, Junshi and Yokoya, Naoto},
-  journal={arXiv preprint arXiv:2310.02674},
-  year={2023}
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={ObjFormer: Learning Land-Cover Changes From Paired OSM Data and Optical High-Resolution Imagery via Object-Guided Transformer}, 
+  year={2024},
+  volume={62},
+  number={},
+  pages={1-22},
+  doi={10.1109/TGRS.2024.3410389}
 }
 ```
 
 
-## Other links
-If you are interested in land-cover mapping and domain adaptation in remote sensing using virtual datasets, you can also follow our two datasets below.
+## 🔗Other links
+If you are interested in land-cover mapping and domain adaptation in remote sensing using synthetic datasets, you can also follow our two datasets below.
 
-[OpenEarthMap dataset](https://open-earth-map.org/): a benchmark dataset for global sub-meter level land cover mapping.
+* *[OpenEarthMap dataset](https://open-earth-map.org/): a benchmark dataset for global sub-meter level land cover mapping.*
 
-[SyntheWorld dataset](https://github.com/JTRNEO/SyntheWorld)
-: a large-scale virtual remote sensing datasets for land cover mapping and change detection.
+* *[SyntheWorld dataset](https://github.com/JTRNEO/SyntheWorld): a large-scale synthetic remote sensing datasets for land cover mapping and building change detection.* 
 
-## Q & A
+## 🙋Q & A
 **For any questions, please [contact us.](mailto:Qschrx@gmail.com)**
