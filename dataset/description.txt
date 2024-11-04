@@ -1,0 +1,1 @@
+Please download OpenMapCD dataset from (https://zenodo.org/records/14028095) and put it under this folder. 
